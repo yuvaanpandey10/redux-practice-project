@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #6a7282;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #05df72;
+  color: #032e15;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
