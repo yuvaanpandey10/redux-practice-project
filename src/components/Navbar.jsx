@@ -36,7 +36,28 @@ const Navbar = () => {
     >
       <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-3 px-4 py-3 sm:px-8">
         <Link to="/" className="text-xl font-bold tracking-tight">
-          yyyyyyyy
+          <span className="flex items-center gap-2.5">
+            <span className="grid h-9 w-9 place-items-center rounded-xl bg-linear-to-br from-slate-100 to-slate-400 text-gray-900 shadow-md shadow-black/20">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="4" width="13" height="15" rx="3" />
+                <path d="m5.5 15 3.2-3.5 2.2 2.2 1.8-1.8 3.3 3.6" />
+                <circle cx="11" cy="8.5" r="1.2" />
+                <path d="M17 7h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9" />
+              </svg>
+            </span>
+            <span className="bg-linear-to-r from-white to-slate-300 bg-clip-text text-transparent">
+              MediaScope
+            </span>
+          </span>
         </Link>
  
         {!isHome && (

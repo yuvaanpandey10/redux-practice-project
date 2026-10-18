@@ -4,7 +4,7 @@ const Footer = () => (
       Photos by <b>Unsplash</b> · Videos by <b>Pixabay</b> · GIFs by <b>Klipy</b>
     </p>
     <p className="mt-1 text-xs text-gray-400">
-      yyyyyyyy · Built with React, Redux, Tailwind &amp; Motion
+      MediaScope · Built with React, Redux, Tailwind &amp; Motion
     </p>
   </footer>
 );
