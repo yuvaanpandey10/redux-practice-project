@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addRecent } from "../redux/features/searchSlice.js";
@@ -9,11 +9,6 @@ const SearchBar = ({ variant = "hero" }) => {
   const navigate = useNavigate();
   const { q, type } = useSearchState();
   const [text, setText] = useState(variant === "compact" ? q : "");
- 
-  // keep the compact bar in sync with the URL
-  useEffect(() => {
-    if (variant === "compact") setText(q);
-  }, [q, variant]);
  
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,12 +27,13 @@ const SearchBar = ({ variant = "hero" }) => {
       className={`relative w-full ${hero ? "max-w-2xl" : ""}`}
     >
       <input
+        key={`${variant}-${q}`}
         value={text}
         onChange={(e) => setText(e.target.value)}
         type="text"
         placeholder={hero ? "Search photos, videos, GIFs..." : "Search anything..."}
         aria-label="Search"
-        className={`w-full rounded-full bg-white text-gray-900 placeholder-gray-400 shadow-md outline-none ring-2 ring-transparent transition focus:ring-green-400 ${
+        className={`w-full rounded-full bg-white text-gray-900 placeholder-gray-400 shadow-md outline-none ring-2 ring-transparent transition focus:ring-slate-400 ${
           hero ? "py-4 pl-6 pr-32 text-lg" : "py-2 pl-4 pr-24 text-sm"
         }`}
       />
